@@ -1,0 +1,269 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('https://www.transparenttextures.com/patterns/diagmonds-light.png'), linear-gradient(135deg, #f0f4f8, #1e3a5f); /* Light gray and navy blue gradient background with texture */
+    margin: 0; 
+    padding: 20px;
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start; 
+    color: #333; /* Dark text color */
+}
+
+.parent-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: flex-start; 
+    background-color: #1e3a5f; /* Navy blue background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; 
+    max-width: 800px; 
+    margin-bottom: 20px;
+    color: #fff; /* White text color */
+}
+
+h1 {
+    font-family: 'Arial Black', Gadget, sans-serif; /* Change font style */
+    font-size: 36px; /* Make it bigger */
+    color: #ff6f61; /* Coral color */
+    width: 100%; 
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 10px;
+    width: 100%; 
+}
+
+input[type="text"] {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+    flex-grow: 1; 
+    min-width: 200px; 
+}
+
+input[type="text"]:focus {
+    border-color: #ff6f61; /* Coral border on focus */
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #ff6f61; /* Coral background */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e65c50; /* Darker coral on hover */
+}
+
+#studentForm {
+    display: none;
+    position: fixed;
+    top: 60%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff; /* White background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 80%;
+    max-width: 600px;
+    color: #333; /* Dark text color */
+}
+
+#studentForm h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1e3a5f; /* Navy blue text color */
+}
+
+#studentForm form {
+    display: flex;
+    flex-direction: column;
+}
+
+#studentForm .form-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+#studentForm .form-row > * {
+    flex: 1;
+}
+
+#studentForm input[type="text"],
+#studentForm input[type="number"],
+#studentForm select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+    margin-bottom: 10px;
+}
+
+#studentForm input[type="text"]:focus,
+#studentForm input[type="number"]:focus,
+#studentForm select:focus {
+    border-color: #ff6f61; /* Coral border on focus */
+}
+
+#studentForm button {
+    padding: 10px 20px;
+    background-color: #ff6f61; /* Coral background */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+#studentForm button:hover {
+    background-color: #e65c50; /* Darker coral on hover */
+}
+
+#studentForm .radio-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#studentForm .radio-group label {
+    margin-bottom: 0;
+}
+
+#studentForm input::placeholder {
+    color: #999;
+}
+
+#studentForm input[placeholder$="*"]::placeholder,
+#studentForm select[required]::placeholder {
+    color: #d32f2f; 
+}
+
+#studentContainer {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #1e3a5f; /* Navy blue background */
+    border-radius: 10px;
+    width: 100%;
+    max-width: 800px;
+    text-align: center; /* Center the text inside the container */
+    color: #fff; /* White text color */
+}
+
+.student-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Center the cards inside the container */
+}
+
+.student-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    width: 300px; /* Adjusted width to ensure buttons fit */
+    background: linear-gradient(135deg, #008080, #f0f4f8); /* Teal and light gray gradient background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    position: relative;
+    color: #333; /* Dark text color */
+}
+
+.student-card:hover {
+    transform: scale(1.05);
+}
+
+.student-card h3 {
+    margin-top: 0;
+    color: #333; /* Dark text color */
+}
+
+.student-card p {
+    margin: 5px 0;
+    color: #333; /* Dark text color */
+}
+
+.card-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.card-buttons button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.card-buttons .edit-btn {
+    background-color: #007bff;
+}
+
+.card-buttons .delete-btn {
+    background-color: #dc3545;
+}
+
+.card-buttons .edit-btn:hover {
+    background-color: #0056b3;
+}
+
+.card-buttons .delete-btn:hover {
+    background-color: #c82333;
+}
+
+.card-buttons .edit-btn:active, .card-buttons .delete-btn:active {
+    transform: scale(0.95);
+}
+
+.card-buttons button:focus {
+    outline: none;
+}
+
+.card-buttons .edit-btn, .card-buttons .delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.card-buttons .edit-btn {
+    color: #007bff;
+}
+
+.card-buttons .delete-btn {
+    color: #dc3545;
+}
